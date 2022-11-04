@@ -39,6 +39,7 @@ const todoList = () => {
     overdue,
     dueToday,
     dueLater,
+    toDisplayableList,
   };
 };
 
