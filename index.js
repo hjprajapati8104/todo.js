@@ -10,23 +10,23 @@ const todoList = () => {
   };
 
   const overdue = () => {
-    return all.filter((item) => item.dueDate < today);
+    return all.filter((todo) => todo.dueDate < today);
   };
 
   const dueToday = () => {
-    return all.filter((item) => item.dueDate === today);
+    return all.filter((todo) => todo.dueDate === today);
   };
 
   const dueLater = () => {
-    return all.filter((item) => item.dueDate > today);
+    return all.filter((todo) => todo.dueDate > today);
   };
 
   const toDisplayableList = (list) => {
     return list
       .map(
-        (item) =>
-          `${item.completed ? `[x]` : `[ ]`} ${item.title} ${
-            item.dueDate != today ? item.dueDate : " "
+        (todo) =>
+          `${todo.completed ? `[x]` : `[ ]`} ${todo.title} ${
+            todo.dueDate != today ? todo.dueDate : " "
           }`
       )
       .join("\n");
