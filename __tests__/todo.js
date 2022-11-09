@@ -18,12 +18,12 @@ let tomorrow = formattedDate(
 describe("Todolist Test Suit", () => {
   beforeAll(() => {
     add({
-      title: "todo - 1",
+      title: "test- 1",
       completed: false,
       dueDate: yesterday,
     }),
       add({
-        title: "todo - 2",
+        title: "test- 2",
         completed: false,
         dueDate: tomorrow,
       });
@@ -31,7 +31,7 @@ describe("Todolist Test Suit", () => {
   test("Add a new todo in list", () => {
     const todoItemCount = all.length;
     add({
-      title: "todo - 3",
+      title: "test- 3",
       completed: false,
       dueDate: today,
     });

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const todoList = () => {
   const all = [];
 
@@ -10,23 +11,23 @@ const todoList = () => {
   };
 
   const overdue = () => {
-    return all.filter((todo) => todo.dueDate < today);
+    return all.filter((item) => item.dueDate < today);
   };
 
   const dueToday = () => {
-    return all.filter((todo) => todo.dueDate === today);
+    return all.filter((item) => item.dueDate === today);
   };
 
   const dueLater = () => {
-    return all.filter((todo) => todo.dueDate > today);
+    return all.filter((item) => item.dueDate > today);
   };
 
   const toDisplayableList = (list) => {
     return list
       .map(
-        (todo) =>
-          `${todo.completed ? `[x]` : `[ ]`} ${todo.title} ${
-            todo.dueDate != today ? todo.dueDate : " "
+        (item) =>
+          `${item.completed ? `[x]` : `[ ]`} ${item.title} ${
+            item.dueDate != today ? item.dueDate : " "
           }`
       )
       .join("\n");
@@ -39,7 +40,6 @@ const todoList = () => {
     overdue,
     dueToday,
     dueLater,
-    toDisplayableList,
   };
 };
 
